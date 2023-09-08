@@ -18949,7 +18949,7 @@ async function fetchSlackUser(email, token) {
         }
         return { memberId: user.id, username: user.name};
     } catch (err) {
-        _actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed(`error: ${err}`)
+        _actions_core__WEBPACK_IMPORTED_MODULE_0__.error(`error fetching slack user for email ${email}: ${err}`)
         return undefined;
     }
 }

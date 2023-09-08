@@ -58,7 +58,7 @@ async function fetchSlackUser(email, token) {
         }
         return { memberId: user.id, username: user.name};
     } catch (err) {
-        core.setFailed(`error: ${err}`)
+        core.error(`error fetching slack user for email ${email}: ${err}`)
         return undefined;
     }
 }
